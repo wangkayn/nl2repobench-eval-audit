@@ -41,6 +41,11 @@ Instrumented `pip`, `pytest`, and `touch` fixture executables record which progr
 which environment variables they receive, and whether pytest starts before setup finishes. They do
 not install packages or require network access.
 
+Upstream tracking:
+
+- [Issue #13: command strings lose shell semantics](https://github.com/multimodal-art-projection/NL2RepoBench/issues/13)
+- [Draft PR #14: candidate shell-backed runner and task corrections](https://github.com/multimodal-art-projection/NL2RepoBench/pull/14)
+
 Run:
 
 ```bash
@@ -83,7 +88,8 @@ The benchmark should not silently overwrite historical semantics. A versioned re
   `binaryalert` (`set` versus `export`), reviewed separately;
 - score reports that name the grader version.
 
-See [`docs/upstream-issue.md`](docs/upstream-issue.md) for the upstream report source.
+See [`docs/upstream-issue.md`](docs/upstream-issue.md) and
+[`docs/upstream-pr.md`](docs/upstream-pr.md) for the submitted report and patch rationale.
 
 ## Scope and attribution
 

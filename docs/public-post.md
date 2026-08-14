@@ -11,8 +11,8 @@ I built a cross-platform A/B reproducer, pinned the upstream commit, documented 
 and proposed a versioned repair that preserves historical comparability.
 
 - Reproducer: https://github.com/wangkayn/nl2repobench-eval-audit
-- Upstream issue: `ISSUE_URL_TO_BE_ADDED`
-- Patch/PR: `PR_URL_TO_BE_ADDED`
+- Upstream issue: https://github.com/multimodal-art-projection/NL2RepoBench/issues/13
+- Draft patch: https://github.com/multimodal-art-projection/NL2RepoBench/pull/14
 
 Important scope note: the command-execution effect is reproduced. A numeric leaderboard impact is
 not claimed until the same generated workspaces are rescored under both grader versions.

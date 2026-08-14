@@ -1,11 +1,3 @@
-# Draft upstream issue
-
-## Title
-
-`[Evaluation correctness] testShell commands lose shell semantics in 7/104 tasks`
-
-## Body
-
 ### Summary
 
 At commit `781a1da1ee41fb8edb0bed22f586d69111610edf`, string commands from
