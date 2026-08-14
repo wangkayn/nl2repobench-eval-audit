@@ -85,7 +85,9 @@ delta is `asteval`: legacy cannot collect tests (0/227), while the corrected pat
 `arxiv-mcp-server` changes from 0/23 to 18/23 with the selected reference commit.
 
 The run also exposes two independent data/image problems: the published `boto:1.0` image has no
-`pytest` executable, and the `parse` suite reports 98 passed against a declared denominator of 96.
+`pytest` executable ([upstream #15](https://github.com/multimodal-art-projection/NL2RepoBench/issues/15)),
+and the `parse` suite reports 98 passed against a declared denominator of 96
+([upstream #16](https://github.com/multimodal-art-projection/NL2RepoBench/issues/16)).
 
 ## What this establishes
 
@@ -114,7 +116,9 @@ The benchmark should not silently overwrite historical semantics. A versioned re
 - score reports that name the grader version.
 
 See [`docs/upstream-issue.md`](docs/upstream-issue.md) and
-[`docs/upstream-pr.md`](docs/upstream-pr.md) for the submitted report and patch rationale.
+[`docs/upstream-pr.md`](docs/upstream-pr.md) for the submitted report and patch rationale. The
+real-image follow-ups are preserved in [`docs/real-image-issue-update.md`](docs/real-image-issue-update.md)
+and [`docs/real-image-pr-update.md`](docs/real-image-pr-update.md).
 
 ## Scope and attribution
 
