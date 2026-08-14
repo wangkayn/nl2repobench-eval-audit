@@ -62,6 +62,31 @@ prime adapter: redirection/&&/assignment cases work
 prime adapter: parse still races; pytest starts before editable install completes
 ```
 
+## Real-image seven-task A/B
+
+A second reproducer runs the pinned legacy evaluator and the corrected runner against the seven
+public `linux/amd64` task images. For a meaningful test path, it overlays version-matched upstream
+reference source after applying the official workspace sanitization steps. Every task/mode pair
+uses a fresh container.
+
+```bash
+python3 prepare_candidate_images.py \
+  --sources /path/to/version-matched-sources
+
+python3 docker_ab.py \
+  --image-template 'nl2repo-audit/{task}:candidate' \
+  --workspace-kind 'upstream reference source overlay; official sanitization applied'
+```
+
+The completed run, including exact image digests, source commits, argv, stdout/stderr, file hashes,
+and command timings, is in
+[`results/docker/full-reference-run`](results/docker/full-reference-run). Its largest score-path
+delta is `asteval`: legacy cannot collect tests (0/227), while the corrected path passes 227/227.
+`arxiv-mcp-server` changes from 0/23 to 18/23 with the selected reference commit.
+
+The run also exposes two independent data/image problems: the published `boto:1.0` image has no
+`pytest` executable, and the `parse` suite reports 98 passed against a declared denominator of 96.
+
 ## What this establishes
 
 - The official runner does not preserve the shell semantics present in the released task commands.
@@ -72,11 +97,11 @@ prime adapter: parse still races; pytest starts before editable install complete
 
 ## What this does **not** yet establish
 
-This repository does not yet claim a numeric change to a published leaderboard. A defensible score
-impact requires rescoring the same generated workspaces under both the pinned legacy grader and a
-versioned corrected grader using the public project images. Until that paired experiment is
-complete, the finding is an evaluator inconsistency with a demonstrated execution effect, not a
-quantified leaderboard correction.
+This repository does not claim a numeric change to a published leaderboard. The real-image run uses
+reference source to isolate the evaluator path, not a submitted model workspace. A defensible
+leaderboard impact still requires rescoring the exact same generated workspaces under both the
+pinned legacy grader and a versioned corrected grader. Until that paired experiment is complete,
+the result quantifies evaluator effects on controlled reference inputs, not a leaderboard correction.
 
 ## Proposed remediation
 

@@ -1,0 +1,82 @@
+{
+  "after": {
+    "setup.py": {
+      "exists": false
+    },
+    "tests/requirements.txt": {
+      "exists": true,
+      "is_dir": false,
+      "is_file": true,
+      "mode": "0o644",
+      "preview": "pytest\npytest-cov\n",
+      "sha256": "a289ba73acbd5364833d467558f8310d0ada06ab5bcc6ce02fcfa6c18b3aa7dc",
+      "size": 18
+    }
+  },
+  "before": {
+    "setup.py": {
+      "exists": false
+    },
+    "tests/requirements.txt": {
+      "exists": true,
+      "is_dir": false,
+      "is_file": true,
+      "mode": "0o644",
+      "preview": "pytest\npytest-cov\n",
+      "sha256": "a289ba73acbd5364833d467558f8310d0ada06ab5bcc6ce02fcfa6c18b3aa7dc",
+      "size": 18
+    }
+  },
+  "cleanup_exit_code": 0,
+  "commands": [
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "pip install -e . && pip install -r tests/requirements.txt"
+      ],
+      "command": "pip install -e . && pip install -r tests/requirements.txt",
+      "duration_seconds": 50.246,
+      "exit_code": 0,
+      "index": 1,
+      "stderr": "WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.\n\n[notice] A new release of pip is available: 25.1.1 -> 26.2.1\n[notice] To update, run: pip install --upgrade pip\nWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.\n\n[notice] A new release of pip is available: 25.1.1 -> 26.2.1\n[notice] To update, run: pip install --upgrade pip\n",
+      "stdout": "Obtaining file:///workspace\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Getting requirements to build editable: started\n  Getting requirements to build editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: parse\n  Building editable for parse (pyproject.toml): started\n  Building editable for parse (pyproject.toml): finished with status 'done'\n  Created wheel for parse: filename=parse-1.20.2-0.editable-py2.py3-none-any.whl size=11842 sha256=a2d253067d3a2c4dab419ce620bf319ddc3b3fbd51a13c79eb0f00e2ce521adc\n  Stored in directory: /tmp/pip-ephem-wheel-cache-dj369etp/wheels/bc/5e/68/a9184942e18dc0c23a13f0a1bb35f37a2e66637956a4dbcbff\nSuccessfully built parse\nInstalling collected packages: parse\nSuccessfully installed parse-1.20.2\nRequirement already satisfied: pytest in /usr/local/lib/python3.13/site-packages (from -r tests/requirements.txt (line 1)) (8.4.1)\nRequirement already satisfied: pytest-cov in /usr/local/lib/python3.13/site-packages (from -r tests/requirements.txt (line 2)) (6.2.1)\nRequirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.13/site-packages (from pytest->-r tests/requirements.txt (line 1)) (2.1.0)\nRequirement already satisfied: packaging>=20 in /usr/local/lib/python3.13/site-packages (from pytest->-r tests/requirements.txt (line 1)) (25.0)\nRequirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.13/site-packages (from pytest->-r tests/requirements.txt (line 1)) (1.6.0)\nRequirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.13/site-packages (from pytest->-r tests/requirements.txt (line 1)) (2.19.2)\nRequirement already satisfied: coverage>=7.5 in /usr/local/lib/python3.13/site-packages (from coverage[toml]>=7.5->pytest-cov->-r tests/requirements.txt (line 2)) (7.10.4)\n",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "pytest --continue-on-collection-errors"
+      ],
+      "command": "pytest --continue-on-collection-errors",
+      "duration_seconds": 12.48,
+      "exit_code": 0,
+      "index": 2,
+      "stderr": "",
+      "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.13.4, pytest-8.4.1, pluggy-1.6.0\nrootdir: /workspace\nconfigfile: .pytest.ini\nplugins: cov-6.2.1\ncollected 99 items\n\nREADME.rst .                                                             [  1%]\nparse.py .                                                               [  2%]\ntests/test_bugs.py ...........                                           [ 13%]\ntests/test_findall.py ...                                                [ 16%]\ntests/test_parse.py .............................................s.....  [ 67%]\ntests/test_parsetype.py .............                                    [ 80%]\ntests/test_pattern.py ...........                                        [ 91%]\ntests/test_result.py ....                                                [ 95%]\ntests/test_search.py ....                                                [100%]\n\n================================ tests coverage ================================\n_______________ coverage: platform linux, python 3.13.4-final-0 ________________\n\nName       Stmts   Miss Branch BrPart  Cover   Missing\n------------------------------------------------------\nparse.py     545     19    240     10    96%   133, 136, 141, 248, 291, 396, 440, 448-452, 465-467, 483, 515->517, 538->540, 632-635, 832->836, 845\n------------------------------------------------------\nTOTAL        545     19    240     10    96%\n======================== 98 passed, 1 skipped in 7.75s =========================\n",
+      "timed_out": false
+    }
+  ],
+  "image": {
+    "architecture": "amd64",
+    "id": "sha256:32204c622ce166f2667fb41a25180a71303ef570126faf9c42ad2de10358f344",
+    "os": "linux",
+    "reference": "nl2repo-audit/parse:candidate",
+    "repo_digests": [
+      "nl2repo-audit/parse@sha256:32204c622ce166f2667fb41a25180a71303ef570126faf9c42ad2de10358f344"
+    ],
+    "size": 55987786
+  },
+  "mode": "fixed",
+  "official_commit": "781a1da1ee41fb8edb0bed22f586d69111610edf",
+  "pytest": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 98,
+    "success_rate": 1,
+    "total": 96
+  },
+  "runner": "/bin/sh -lc",
+  "task": "parse"
+}

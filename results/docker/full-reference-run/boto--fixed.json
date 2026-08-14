@@ -1,0 +1,90 @@
+{
+  "after": {
+    "README.rst": {
+      "exists": true,
+      "is_dir": false,
+      "is_file": true,
+      "mode": "0o644",
+      "preview": "===============================\nBoto3 - The AWS SDK for Python\n===============================\n\n|Version| |Python| |License|\n\nBoto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for\nPython, which allows Python developers to write software that makes use\nof services like Amazon S3 and Amazon EC2. You can find the latest, most\nup to date, documentation at our `doc site`_, including a list of\nservices that are supported.\n\nBoto3 is maintained and published by `Amazon Web Services`_.\n\nBoto (pronounced boh-toh) was named after the fresh water dolphin native to the Amazon river. The name was chosen by the author of the original Boto library, Mitch Garnaat, as a reference to the company.\n\nNotices\n-------\n\nOn 2025-04-22, support for Python 3.8 ended for Boto3. This follows the\nPython Software Foundation `end of support <https://peps.python.org/pep-0569/#lifespan>`__\nfor the runtime which occurred on 2024-10-07.\nFor more information, see this `blog post <https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/>`__.\n\n.. _boto: https://docs.pythonboto.org/\n.. _`doc site`: https://boto3.amazonaws.com/v1/documentation/api/latest/index.html\n.. _`Amazon Web Services`: https://aws.amazon.com/what-is-aws/\n.. |Python| image:: https://img.shields.io/pypi/pyversions/boto3.svg?style=flat\n    :target: https://pypi.python.org/pypi/boto3/\n    :alt: Python Versions\n.. |Version| image:: http://img.shields.io/pypi/v/boto3.svg?style=flat\n    :target: https://pypi.python.org/pypi/boto3/\n    :alt: Package Version\n.. |License| image:: http://img.shields.io/pypi/l/boto3.svg?style=flat\n    :target: https://github.com/boto/boto3/blob/develop/LICENSE\n    :alt: License\n\nGetting Started\n---------------\nAssuming that you have a supported version of Python installed, you can first\nset up your environment with:\n\n.. code-block:: sh\n\n    $ python -m venv .venv\n    ...\n    $ . .venv/bin/activate\n\nThen, you can install boto3 from PyPI with:\n\n.. code-block:: sh\n\n    $ python -m pip install boto3\n\nor install from source with:\n\n.. code-block:: sh\n\n    $ git clone https://github.com/boto/boto3.git\n    $ cd boto3\n    $ python -m pip install -r requirements.txt\n    $ python -m pip install -e .\n\n\nUsing Boto3\n~~~~~~~~~~~~~~\nAfter installing boto3\n\nNext, set up credentials (in e.g. ``~/.aws/credentials``):\n\n.. code-block:: ini\n\n    [default]\n    aws_access_key_id = YOUR_KEY\n    aws_secret_access_key = YOUR_SECRET\n\nThen, set up a default region (in e.g. ``~/.aws/config``):\n\n.. code-block:: ini\n\n   [default]\n   region=us-east-1\n\nOther credential configuration methods can be found `here <https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html>`__\n\nThen, from a Python interpreter:\n\n.. code-block:: python\n\n    >>> import boto3\n    >>> s3 = boto3.resource('s3')\n    >>> for bucket in s3.buckets.all():\n            print(bucket.name)\n\nRunning Tests\n~~~~~~~~~~~~~\nYou can run tests in all supported Python versions using ``tox``. By default,\nit will run all of the unit and functional tests, but you can also specify your own\n``pytest`` options. Note that this requires that you have all supported\nversions of Python installed, otherwise you must pass ``-e`` or run the\n``pytest`` command directly:\n\n.. code-block:: sh\n\n    $ tox\n    $ tox -- unit/test_session.py\n    $ tox -e py26,py33 -- integration/\n\nYou can also run individual tests with your default Python version:\n\n.. code-block:: sh\n\n    $ pytest tests/unit\n\n\nGetting Help\n------------\n\nWe use GitHub issues for tracking bugs and feature requests and have limited\nbandwidth to address them. Please use these community resources for getting\nhelp:\n\n* Ask a question on `Stack Overflow <https://stackoverflow.com/>`__ and tag it with `boto3 <https://stackoverflow.com/questions/tagged/boto3>`__\n* Open a support ticket with `AWS Support <https://console.aws.amazon.com/support/home#/>`__\n* If it turns out that you may have found a bug, please `open an issue <https://github.com/boto/boto3/issues/new>`__\n\n\nContributing\n------------\n\nWe value feedback and contributions from ",
+      "sha256": "3c24db0ac0976e71a3f7fbd7c205082b8ce41c288c07f2236c2a18952908d0ce",
+      "size": 5414
+    }
+  },
+  "before": {
+    "README.rst": {
+      "exists": true,
+      "is_dir": false,
+      "is_file": true,
+      "mode": "0o644",
+      "preview": "===============================\nBoto3 - The AWS SDK for Python\n===============================\n\n|Version| |Python| |License|\n\nBoto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for\nPython, which allows Python developers to write software that makes use\nof services like Amazon S3 and Amazon EC2. You can find the latest, most\nup to date, documentation at our `doc site`_, including a list of\nservices that are supported.\n\nBoto3 is maintained and published by `Amazon Web Services`_.\n\nBoto (pronounced boh-toh) was named after the fresh water dolphin native to the Amazon river. The name was chosen by the author of the original Boto library, Mitch Garnaat, as a reference to the company.\n\nNotices\n-------\n\nOn 2025-04-22, support for Python 3.8 ended for Boto3. This follows the\nPython Software Foundation `end of support <https://peps.python.org/pep-0569/#lifespan>`__\nfor the runtime which occurred on 2024-10-07.\nFor more information, see this `blog post <https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/>`__.\n\n.. _boto: https://docs.pythonboto.org/\n.. _`doc site`: https://boto3.amazonaws.com/v1/documentation/api/latest/index.html\n.. _`Amazon Web Services`: https://aws.amazon.com/what-is-aws/\n.. |Python| image:: https://img.shields.io/pypi/pyversions/boto3.svg?style=flat\n    :target: https://pypi.python.org/pypi/boto3/\n    :alt: Python Versions\n.. |Version| image:: http://img.shields.io/pypi/v/boto3.svg?style=flat\n    :target: https://pypi.python.org/pypi/boto3/\n    :alt: Package Version\n.. |License| image:: http://img.shields.io/pypi/l/boto3.svg?style=flat\n    :target: https://github.com/boto/boto3/blob/develop/LICENSE\n    :alt: License\n\nGetting Started\n---------------\nAssuming that you have a supported version of Python installed, you can first\nset up your environment with:\n\n.. code-block:: sh\n\n    $ python -m venv .venv\n    ...\n    $ . .venv/bin/activate\n\nThen, you can install boto3 from PyPI with:\n\n.. code-block:: sh\n\n    $ python -m pip install boto3\n\nor install from source with:\n\n.. code-block:: sh\n\n    $ git clone https://github.com/boto/boto3.git\n    $ cd boto3\n    $ python -m pip install -r requirements.txt\n    $ python -m pip install -e .\n\n\nUsing Boto3\n~~~~~~~~~~~~~~\nAfter installing boto3\n\nNext, set up credentials (in e.g. ``~/.aws/credentials``):\n\n.. code-block:: ini\n\n    [default]\n    aws_access_key_id = YOUR_KEY\n    aws_secret_access_key = YOUR_SECRET\n\nThen, set up a default region (in e.g. ``~/.aws/config``):\n\n.. code-block:: ini\n\n   [default]\n   region=us-east-1\n\nOther credential configuration methods can be found `here <https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html>`__\n\nThen, from a Python interpreter:\n\n.. code-block:: python\n\n    >>> import boto3\n    >>> s3 = boto3.resource('s3')\n    >>> for bucket in s3.buckets.all():\n            print(bucket.name)\n\nRunning Tests\n~~~~~~~~~~~~~\nYou can run tests in all supported Python versions using ``tox``. By default,\nit will run all of the unit and functional tests, but you can also specify your own\n``pytest`` options. Note that this requires that you have all supported\nversions of Python installed, otherwise you must pass ``-e`` or run the\n``pytest`` command directly:\n\n.. code-block:: sh\n\n    $ tox\n    $ tox -- unit/test_session.py\n    $ tox -e py26,py33 -- integration/\n\nYou can also run individual tests with your default Python version:\n\n.. code-block:: sh\n\n    $ pytest tests/unit\n\n\nGetting Help\n------------\n\nWe use GitHub issues for tracking bugs and feature requests and have limited\nbandwidth to address them. Please use these community resources for getting\nhelp:\n\n* Ask a question on `Stack Overflow <https://stackoverflow.com/>`__ and tag it with `boto3 <https://stackoverflow.com/questions/tagged/boto3>`__\n* Open a support ticket with `AWS Support <https://console.aws.amazon.com/support/home#/>`__\n* If it turns out that you may have found a bug, please `open an issue <https://github.com/boto/boto3/issues/new>`__\n\n\nContributing\n------------\n\nWe value feedback and contributions from ",
+      "sha256": "b365543e1a2f7d5a98c6d9d91ddeea3f5879a94ebd9b23be11684d7eea02c52b",
+      "size": 5389
+    }
+  },
+  "cleanup_exit_code": 0,
+  "commands": [
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "echo 'This is sample RST text.' >> README.rst"
+      ],
+      "command": "echo 'This is sample RST text.' >> README.rst",
+      "duration_seconds": 0.417,
+      "exit_code": 0,
+      "index": 1,
+      "stderr": "",
+      "stdout": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "pip install  -e ."
+      ],
+      "command": "pip install  -e .",
+      "duration_seconds": 81.91,
+      "exit_code": 0,
+      "index": 2,
+      "stderr": "WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv\n\n[notice] A new release of pip is available: 23.2.1 -> 26.2.1\n[notice] To update, run: pip install --upgrade pip\n",
+      "stdout": "Obtaining file:///workspace\n  Preparing metadata (setup.py): started\n  Preparing metadata (setup.py): finished with status 'done'\nCollecting botocore<1.41.0,>=1.40.52 (from boto3==1.40.56)\n  Obtaining dependency information for botocore<1.41.0,>=1.40.52 from https://files.pythonhosted.org/packages/7f/6c/522e05388aa6fc66cf8ea46c6b29809a1a6f527ea864998b01ffb368ca36/botocore-1.40.76-py3-none-any.whl.metadata\n  Downloading botocore-1.40.76-py3-none-any.whl.metadata (5.9 kB)\nCollecting jmespath<2.0.0,>=0.7.1 (from boto3==1.40.56)\n  Obtaining dependency information for jmespath<2.0.0,>=0.7.1 from https://files.pythonhosted.org/packages/14/2f/967ba146e6d58cf6a652da73885f52fc68001525b4197effc174321d70b4/jmespath-1.1.0-py3-none-any.whl.metadata\n  Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)\nCollecting s3transfer<0.15.0,>=0.14.0 (from boto3==1.40.56)\n  Obtaining dependency information for s3transfer<0.15.0,>=0.14.0 from https://files.pythonhosted.org/packages/48/f0/ae7ca09223a81a1d890b2557186ea015f6e0502e9b8cb8e1813f1d8cfa4e/s3transfer-0.14.0-py3-none-any.whl.metadata\n  Downloading s3transfer-0.14.0-py3-none-any.whl.metadata (1.7 kB)\nCollecting python-dateutil<3.0.0,>=2.1 (from botocore<1.41.0,>=1.40.52->boto3==1.40.56)\n  Obtaining dependency information for python-dateutil<3.0.0,>=2.1 from https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata\n  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)\nCollecting urllib3!=2.2.0,<3,>=1.25.4 (from botocore<1.41.0,>=1.40.52->boto3==1.40.56)\n  Obtaining dependency information for urllib3!=2.2.0,<3,>=1.25.4 from https://files.pythonhosted.org/packages/7f/3e/5db95bcf282c52709639744ca2a8b149baccf648e39c8cc87553df9eae0c/urllib3-2.7.0-py3-none-any.whl.metadata\n  Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)\nCollecting six>=1.5 (from python-dateutil<3.0.0,>=2.1->botocore<1.41.0,>=1.40.52->boto3==1.40.56)\n  Obtaining dependency information for six>=1.5 from https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl.metadata\n  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)\nDownloading botocore-1.40.76-py3-none-any.whl (14.2 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 14.2/14.2 MB 1.1 MB/s eta 0:00:00\nDownloading jmespath-1.1.0-py3-none-any.whl (20 kB)\nDownloading s3transfer-0.14.0-py3-none-any.whl (85 kB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 85.7/85.7 kB 1.5 MB/s eta 0:00:00\nDownloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 229.9/229.9 kB 1.6 MB/s eta 0:00:00\nDownloading urllib3-2.7.0-py3-none-any.whl (131 kB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 131.1/131.1 kB 2.3 MB/s eta 0:00:00\nDownloading six-1.17.0-py2.py3-none-any.whl (11 kB)\nInstalling collected packages: urllib3, six, jmespath, python-dateutil, botocore, s3transfer, boto3\n  Running setup.py develop for boto3\nSuccessfully installed boto3-1.40.56 botocore-1.40.76 jmespath-1.1.0 python-dateutil-2.9.0.post0 s3transfer-0.14.0 six-1.17.0 urllib3-2.7.0\n",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "pytest --continue-on-collection-errors tests"
+      ],
+      "command": "pytest --continue-on-collection-errors tests",
+      "duration_seconds": 0.373,
+      "exit_code": 127,
+      "index": 3,
+      "stderr": "/bin/sh: 1: pytest: not found\n",
+      "stdout": "",
+      "timed_out": false
+    }
+  ],
+  "image": {
+    "architecture": "amd64",
+    "id": "sha256:fb63838d61afc99ab00998676094269f4cdba2a04c24a73c85a09c1e7c03b1fa",
+    "os": "linux",
+    "reference": "nl2repo-audit/boto:candidate",
+    "repo_digests": [
+      "nl2repo-audit/boto@sha256:fb63838d61afc99ab00998676094269f4cdba2a04c24a73c85a09c1e7c03b1fa"
+    ],
+    "size": 379203979
+  },
+  "mode": "fixed",
+  "official_commit": "781a1da1ee41fb8edb0bed22f586d69111610edf",
+  "pytest": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 0,
+    "success_rate": 0.0,
+    "total": 1014
+  },
+  "runner": "/bin/sh -lc",
+  "task": "boto"
+}

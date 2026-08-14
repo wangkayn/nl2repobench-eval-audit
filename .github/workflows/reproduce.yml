@@ -21,5 +21,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Run regression tests
         run: python -m unittest -v
+      - name: Check real-image harness syntax
+        run: python -m py_compile docker_ab.py prepare_candidate_images.py
       - name: Print concise reproduction summary
         run: python reproduce.py --summary

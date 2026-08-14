@@ -1,0 +1,122 @@
+{
+  "after": {
+    "LICENSE.txt": {
+      "exists": true,
+      "is_dir": false,
+      "is_file": true,
+      "mode": "0o644",
+      "preview": "Copyright 2007 Pallets\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are\nmet:\n\n1.  Redistributions of source code must retain the above copyright\n    notice, this list of conditions and the following disclaimer.\n\n2.  Redistributions in binary form must reproduce the above copyright\n    notice, this list of conditions and the following disclaimer in the\n    documentation and/or other materials provided with the distribution.\n\n3.  Neither the name of the copyright holder nor the names of its\n    contributors may be used to endorse or promote products derived from\n    this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\nLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A\nPARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\nHOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\nSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED\nTO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\nPROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF\nLIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\nThis is sample license text.\n",
+      "sha256": "4ad473d79258dac1259dccdf71eb9bbc3dfbc0b261d2cdb7635acf94fbb69041",
+      "size": 1504
+    },
+    "README.md": {
+      "exists": true,
+      "is_dir": false,
+      "is_file": true,
+      "mode": "0o644",
+      "preview": "# Jinja\n\nJinja is a fast, expressive, extensible templating engine. Special\nplaceholders in the template allow writing code similar to Python\nsyntax. Then the template is passed data to render the final document.\n\nIt includes:\n\n-   Template inheritance and inclusion.\n-   Define and import macros within templates.\n-   HTML templates can use autoescaping to prevent XSS from untrusted\n    user input.\n-   A sandboxed environment can safely render untrusted templates.\n-   AsyncIO support for generating templates and calling async\n    functions.\n-   I18N support with Babel.\n-   Templates are compiled to optimized Python code just-in-time and\n    cached, or can be compiled ahead-of-time.\n-   Exceptions point to the correct line in templates to make debugging\n    easier.\n-   Extensible filters, tests, functions, and even syntax.\n\nJinja's philosophy is that while application logic belongs in Python if\npossible, it shouldn't make the template designer's job difficult by\nrestricting functionality too much.\n\n\n## In A Nutshell\n\n```jinja\n{% extends \"base.html\" %}\n{% block title %}Members{% endblock %}\n{% block content %}\n  <ul>\n  {% for user in users %}\n    <li><a href=\"{{ user.url }}\">{{ user.username }}</a></li>\n  {% endfor %}\n  </ul>\n{% endblock %}\n```\n\n## Donate\n\nThe Pallets organization develops and supports Jinja and other popular\npackages. In order to grow the community of contributors and users, and\nallow the maintainers to devote more time to the projects, [please\ndonate today][].\n\n[please donate today]: https://palletsprojects.com/donate\n\n## Contributing\n\nSee our [detailed contributing documentation][contrib] for many ways to\ncontribute, including reporting issues, requesting features, asking or answering\nquestions, and making PRs.\n\n[contrib]: https://palletsprojects.com/contributing/\nThis is sample README text.\n",
+      "sha256": "88bff96e6965bf6a6aa19d2e8149cc0a733f6fd88756b62b14a7f32fc905c5fe",
+      "size": 1840
+    }
+  },
+  "before": {
+    "LICENSE.txt": {
+      "exists": true,
+      "is_dir": false,
+      "is_file": true,
+      "mode": "0o644",
+      "preview": "Copyright 2007 Pallets\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are\nmet:\n\n1.  Redistributions of source code must retain the above copyright\n    notice, this list of conditions and the following disclaimer.\n\n2.  Redistributions in binary form must reproduce the above copyright\n    notice, this list of conditions and the following disclaimer in the\n    documentation and/or other materials provided with the distribution.\n\n3.  Neither the name of the copyright holder nor the names of its\n    contributors may be used to endorse or promote products derived from\n    this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\nLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A\nPARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\nHOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\nSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED\nTO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\nPROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF\nLIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+      "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b",
+      "size": 1475
+    },
+    "README.md": {
+      "exists": true,
+      "is_dir": false,
+      "is_file": true,
+      "mode": "0o644",
+      "preview": "# Jinja\n\nJinja is a fast, expressive, extensible templating engine. Special\nplaceholders in the template allow writing code similar to Python\nsyntax. Then the template is passed data to render the final document.\n\nIt includes:\n\n-   Template inheritance and inclusion.\n-   Define and import macros within templates.\n-   HTML templates can use autoescaping to prevent XSS from untrusted\n    user input.\n-   A sandboxed environment can safely render untrusted templates.\n-   AsyncIO support for generating templates and calling async\n    functions.\n-   I18N support with Babel.\n-   Templates are compiled to optimized Python code just-in-time and\n    cached, or can be compiled ahead-of-time.\n-   Exceptions point to the correct line in templates to make debugging\n    easier.\n-   Extensible filters, tests, functions, and even syntax.\n\nJinja's philosophy is that while application logic belongs in Python if\npossible, it shouldn't make the template designer's job difficult by\nrestricting functionality too much.\n\n\n## In A Nutshell\n\n```jinja\n{% extends \"base.html\" %}\n{% block title %}Members{% endblock %}\n{% block content %}\n  <ul>\n  {% for user in users %}\n    <li><a href=\"{{ user.url }}\">{{ user.username }}</a></li>\n  {% endfor %}\n  </ul>\n{% endblock %}\n```\n\n## Donate\n\nThe Pallets organization develops and supports Jinja and other popular\npackages. In order to grow the community of contributors and users, and\nallow the maintainers to devote more time to the projects, [please\ndonate today][].\n\n[please donate today]: https://palletsprojects.com/donate\n\n## Contributing\n\nSee our [detailed contributing documentation][contrib] for many ways to\ncontribute, including reporting issues, requesting features, asking or answering\nquestions, and making PRs.\n\n[contrib]: https://palletsprojects.com/contributing/\n",
+      "sha256": "80937e7ca692b6241e5c0a52a67753054bcd5522705d422b26d50ce12c3ebc7a",
+      "size": 1812
+    }
+  },
+  "cleanup_exit_code": 0,
+  "commands": [
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "echo 'This is sample license text.' >> LICENSE.txt"
+      ],
+      "command": "echo 'This is sample license text.' >> LICENSE.txt",
+      "duration_seconds": 0.463,
+      "exit_code": 0,
+      "index": 1,
+      "stderr": "",
+      "stdout": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "echo 'This is sample README text.' >> README.md"
+      ],
+      "command": "echo 'This is sample README text.' >> README.md",
+      "duration_seconds": 0.552,
+      "exit_code": 0,
+      "index": 2,
+      "stderr": "",
+      "stdout": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "pip install  -e ."
+      ],
+      "command": "pip install  -e .",
+      "duration_seconds": 17.815,
+      "exit_code": 0,
+      "index": 3,
+      "stderr": "WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.\n\n[notice] A new release of pip is available: 25.2 -> 26.2.1\n[notice] To update, run: pip install --upgrade pip\n",
+      "stdout": "Obtaining file:///workspace\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Getting requirements to build editable: started\n  Getting requirements to build editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nRequirement already satisfied: MarkupSafe>=3.0 in /usr/local/lib/python3.10/site-packages (from Jinja2==3.2.0.dev0) (3.0.2)\nBuilding wheels for collected packages: Jinja2\n  Building editable for Jinja2 (pyproject.toml): started\n  Building editable for Jinja2 (pyproject.toml): finished with status 'done'\n  Created wheel for Jinja2: filename=jinja2-3.2.0.dev0-py3-none-any.whl size=3294 sha256=50305300fe621820a53f55a4a9c17d0e2471ce8f5cf53e57818557eccf9a9f72\n  Stored in directory: /tmp/pip-ephem-wheel-cache-1lpio5ou/wheels/80/75/f6/d63789e3414f7f88206102fa596a8ddafc889f48984e8712b3\nSuccessfully built Jinja2\nInstalling collected packages: Jinja2\nSuccessfully installed Jinja2-3.2.0.dev0\n",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "pytest --continue-on-collection-errors tests"
+      ],
+      "command": "pytest --continue-on-collection-errors tests",
+      "duration_seconds": 45.433,
+      "exit_code": 0,
+      "index": 4,
+      "stderr": "",
+      "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.10.1, pytest-8.4.0, pluggy-1.6.0\nrootdir: /workspace\nconfigfile: pyproject.toml\nplugins: timeout-2.4.0\ncollected 911 items\n\ntests/test_api.py ..................................                     [  3%]\ntests/test_async.py .................................................... [  9%]\n........................                                                 [ 12%]\ntests/test_async_filters.py ............................................ [ 16%]\n.....                                                                    [ 17%]\ntests/test_bytecode_cache.py ...                                         [ 17%]\ntests/test_compile.py ......                                             [ 18%]\ntests/test_core_tags.py ................................................ [ 23%]\n...............                                                          [ 25%]\ntests/test_debug.py .......                                              [ 26%]\ntests/test_ext.py ...................................................    [ 31%]\ntests/test_filters.py .................................................. [ 37%]\n........................................................................ [ 45%]\n..........                                                               [ 46%]\ntests/test_idtracking.py .....                                           [ 46%]\ntests/test_imports.py ...............                                    [ 48%]\ntests/test_inheritance.py ......................                         [ 50%]\ntests/test_lexnparse.py ................................................ [ 56%]\n........................................................................ [ 63%]\n..............................                                           [ 67%]\ntests/test_loader.py ...........................................         [ 72%]\ntests/test_nativetypes.py .............................                  [ 75%]\ntests/test_nodes.py .                                                    [ 75%]\ntests/test_pickle.py .                                                   [ 75%]\ntests/test_regression.py ............................................... [ 80%]\n.......                                                                  [ 81%]\ntests/test_runtime.py ...................                                [ 83%]\ntests/test_security.py .................                                 [ 85%]\ntests/test_tests.py .................................................... [ 90%]\n......................................................                   [ 96%]\ntests/test_utils.py ............................                         [100%]\n\n============================= 911 passed in 39.56s =============================\n",
+      "timed_out": false
+    }
+  ],
+  "image": {
+    "architecture": "amd64",
+    "id": "sha256:987de9e584e190158473d1bdef1249dbac98319d05d4499e68d17f500ae1acee",
+    "os": "linux",
+    "reference": "nl2repo-audit/jinja:candidate",
+    "repo_digests": [
+      "nl2repo-audit/jinja@sha256:987de9e584e190158473d1bdef1249dbac98319d05d4499e68d17f500ae1acee"
+    ],
+    "size": 237639238
+  },
+  "mode": "fixed",
+  "official_commit": "781a1da1ee41fb8edb0bed22f586d69111610edf",
+  "pytest": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 911,
+    "success_rate": 1.0,
+    "total": 911
+  },
+  "runner": "/bin/sh -lc",
+  "task": "jinja"
+}

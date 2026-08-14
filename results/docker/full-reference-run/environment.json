@@ -1,0 +1,27 @@
+{
+  "colima_status": {
+    "args": [
+      "colima",
+      "status"
+    ],
+    "returncode": 0,
+    "stderr": "time=\"2026-08-14T18:17:52+08:00\" level=info msg=\"colima is running using macOS Virtualization.Framework\"\ntime=\"2026-08-14T18:17:52+08:00\" level=info msg=\"arch: x86_64\"\ntime=\"2026-08-14T18:17:52+08:00\" level=info msg=\"runtime: docker\"\ntime=\"2026-08-14T18:17:52+08:00\" level=info msg=\"mountType: virtiofs\"\ntime=\"2026-08-14T18:17:52+08:00\" level=info msg=\"docker socket: unix://$HOME/.colima/default/docker.sock\"\ntime=\"2026-08-14T18:17:52+08:00\" level=info msg=\"containerd socket: unix://$HOME/.colima/default/containerd.sock\"\n",
+    "stdout": ""
+  },
+  "docker_version": {
+    "args": [
+      "docker",
+      "version"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "Client: Docker Engine - Community\n Version:           29.7.2\n API version:       1.54 (downgraded from 1.55)\n Go version:        go1.26.5\n Git commit:        a7dcaa6fdb\n Built:             Wed Aug  5 17:34:15 2026\n OS/Arch:           darwin/arm64\n Context:           colima\n\nServer: Docker Engine - Community\n Engine:\n  Version:          29.5.2\n  API version:      1.54 (minimum version 1.40)\n  Go version:       go1.26.3\n  Git commit:       568f755\n  Built:            Wed May 20 14:42:18 2026\n  OS/Arch:          linux/amd64\n  Experimental:     false\n containerd:\n  Version:          v2.2.4\n  GitCommit:        193637f7ee8ae5f5aa5248f49e7baa3e6164966e\n runc:\n  Version:          1.3.5\n  GitCommit:        v1.3.5-0-g488fc13e\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\n"
+  },
+  "host_machine": "arm64",
+  "host_platform": "macOS-26.6.1-arm64-arm-64bit-Mach-O",
+  "image_template": "nl2repo-audit/{task}:candidate",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "script_sha256": "76db9cde001684c1d6e9d86b8d83eabdb3e39193a2494fcfb775dbd0145410ae",
+  "timestamp": "2026-08-14T18:17:52.366975+08:00",
+  "workspace_kind": "upstream reference source overlay; official sanitization applied"
+}

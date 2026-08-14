@@ -3,4 +3,7 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 .venv/
-
+build-contexts/
+results/docker/*
+!results/docker/full-reference-run/
+!results/docker/full-reference-run/**

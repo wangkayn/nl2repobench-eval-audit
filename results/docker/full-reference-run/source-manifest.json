@@ -1,0 +1,79 @@
+{
+  "arxiv-mcp-server": {
+    "base": "ghcr.io/multimodal-art-projection/nl2repobench/arxiv-mcp-server:1.0",
+    "base_id": "sha256:1e8074506767811ba7445749212b1f4eece516b003766112ce76b07c4fc2f3c8",
+    "base_repo_digests": [
+      "ghcr.io/multimodal-art-projection/nl2repobench/arxiv-mcp-server@sha256:1e8074506767811ba7445749212b1f4eece516b003766112ce76b07c4fc2f3c8"
+    ],
+    "commit": "6d3419a3ea43cfd95391d2ef3b59ef58d2bf557d",
+    "image": "nl2repo-audit/arxiv-mcp-server:candidate",
+    "image_id": "sha256:3e9c223fdc7fa2f213f831adacf10d1c9e147bddd48f14829a7bd7320d00578b",
+    "source_repository": "https://github.com/blazickjp/arxiv-mcp-server"
+  },
+  "asteval": {
+    "base": "ghcr.io/multimodal-art-projection/nl2repobench/asteval:1.0",
+    "base_id": "sha256:7c9fd70a06c18ab0d5d3f806bbef2edd8484e7f6c01375033caecdb03d29468d",
+    "base_repo_digests": [
+      "ghcr.io/multimodal-art-projection/nl2repobench/asteval@sha256:7c9fd70a06c18ab0d5d3f806bbef2edd8484e7f6c01375033caecdb03d29468d"
+    ],
+    "commit": "633bdc4ee855d426b7dcce8d1c0d907dadde4767",
+    "image": "nl2repo-audit/asteval:candidate",
+    "image_id": "sha256:5bb38efe38313d971840ac52382ac43f591ab953a698a71ab3c32cdd9c919bae",
+    "source_repository": "https://github.com/lmfit/asteval"
+  },
+  "binaryalert": {
+    "base": "ghcr.io/multimodal-art-projection/nl2repobench/binaryalert:1.0",
+    "base_id": "sha256:63d558916bbd258b98507ad99bcab5022dfc38f92e1b39eb66e3cb265f4dd392",
+    "base_repo_digests": [
+      "ghcr.io/multimodal-art-projection/nl2repobench/binaryalert@sha256:63d558916bbd258b98507ad99bcab5022dfc38f92e1b39eb66e3cb265f4dd392"
+    ],
+    "commit": "53d7c407a18f5c3153b6bb4a2ceaf21c8321e89e",
+    "image": "nl2repo-audit/binaryalert:candidate",
+    "image_id": "sha256:81c0180a086a2efbf760353e79fe01e8d786e6ee3f0bc45cbd16d12d58d2bdab",
+    "source_repository": "https://github.com/airbnb/binaryalert"
+  },
+  "boto": {
+    "base": "ghcr.io/multimodal-art-projection/nl2repobench/boto:1.0",
+    "base_id": "sha256:6a70abf3ae8807746d708ce0ab1de72e46f7b14e3f91d68c542a112523468c24",
+    "base_repo_digests": [
+      "ghcr.io/multimodal-art-projection/nl2repobench/boto@sha256:6a70abf3ae8807746d708ce0ab1de72e46f7b14e3f91d68c542a112523468c24"
+    ],
+    "commit": "69f915b4cf1961db9395db23e10c7210ad7a6814",
+    "image": "nl2repo-audit/boto:candidate",
+    "image_id": "sha256:fb63838d61afc99ab00998676094269f4cdba2a04c24a73c85a09c1e7c03b1fa",
+    "source_repository": "https://github.com/boto/boto3"
+  },
+  "jinja": {
+    "base": "ghcr.io/multimodal-art-projection/nl2repobench/jinja:1.0",
+    "base_id": "sha256:4143726f46dd7cd8a24f9894d665b4f4fbc7233787713fb5696810a60a8efe8c",
+    "base_repo_digests": [
+      "ghcr.io/multimodal-art-projection/nl2repobench/jinja@sha256:4143726f46dd7cd8a24f9894d665b4f4fbc7233787713fb5696810a60a8efe8c"
+    ],
+    "commit": "15206881c006c79667fe5154fe80c01c65410679",
+    "image": "nl2repo-audit/jinja:candidate",
+    "image_id": "sha256:987de9e584e190158473d1bdef1249dbac98319d05d4499e68d17f500ae1acee",
+    "source_repository": "https://github.com/pallets/jinja"
+  },
+  "parse": {
+    "base": "ghcr.io/multimodal-art-projection/nl2repobench/parse:1.0",
+    "base_id": "sha256:b62739aff75c836823bf0140ae6db4d329beb74cf79cdb170ed5adb85966ee18",
+    "base_repo_digests": [
+      "ghcr.io/multimodal-art-projection/nl2repobench/parse@sha256:b62739aff75c836823bf0140ae6db4d329beb74cf79cdb170ed5adb85966ee18"
+    ],
+    "commit": "334db144c2813e9029cb890bbd49edd30f67ab9b",
+    "image": "nl2repo-audit/parse:candidate",
+    "image_id": "sha256:32204c622ce166f2667fb41a25180a71303ef570126faf9c42ad2de10358f344",
+    "source_repository": "https://github.com/r1chardj0n3s/parse"
+  },
+  "tqdm": {
+    "base": "ghcr.io/multimodal-art-projection/nl2repobench/tqdm:1.0",
+    "base_id": "sha256:75c3dba71f588b7022445fcefc59ba03163a8161ca5e4ba9dcc556a8f5403fa9",
+    "base_repo_digests": [
+      "ghcr.io/multimodal-art-projection/nl2repobench/tqdm@sha256:75c3dba71f588b7022445fcefc59ba03163a8161ca5e4ba9dcc556a8f5403fa9"
+    ],
+    "commit": "0ed5d7f18fa3153834cbac0aa57e8092b217cc16",
+    "image": "nl2repo-audit/tqdm:candidate",
+    "image_id": "sha256:faf0002bb8bb4571a3bbf98298255b7df1a3888d5fa9c52a4f6f6eaf8e2b3e09",
+    "source_repository": "https://github.com/tqdm/tqdm"
+  }
+}

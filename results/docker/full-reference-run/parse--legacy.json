@@ -1,0 +1,87 @@
+{
+  "after": {
+    "setup.py": {
+      "exists": false
+    },
+    "tests/requirements.txt": {
+      "exists": true,
+      "is_dir": false,
+      "is_file": true,
+      "mode": "0o644",
+      "preview": "pytest\npytest-cov\n",
+      "sha256": "a289ba73acbd5364833d467558f8310d0ada06ab5bcc6ce02fcfa6c18b3aa7dc",
+      "size": 18
+    }
+  },
+  "before": {
+    "setup.py": {
+      "exists": false
+    },
+    "tests/requirements.txt": {
+      "exists": true,
+      "is_dir": false,
+      "is_file": true,
+      "mode": "0o644",
+      "preview": "pytest\npytest-cov\n",
+      "sha256": "a289ba73acbd5364833d467558f8310d0ada06ab5bcc6ce02fcfa6c18b3aa7dc",
+      "size": 18
+    }
+  },
+  "cleanup_exit_code": 0,
+  "commands": [
+    {
+      "argv": [
+        "pip",
+        "install",
+        "-e",
+        ".",
+        "&",
+        "pip",
+        "install",
+        "-r",
+        "tests/requirements.txt"
+      ],
+      "command": "pip install -e . & pip install -r tests/requirements.txt",
+      "duration_seconds": 9.53,
+      "exit_code": 1,
+      "index": 1,
+      "stderr": "\n[notice] A new release of pip is available: 25.1.1 -> 26.2.1\n[notice] To update, run: pip install --upgrade pip\nERROR: Invalid requirement: '&': Expected package name at the start of dependency specifier\n    &\n    ^\n",
+      "stdout": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "pytest",
+        "--continue-on-collection-errors"
+      ],
+      "command": "pytest --continue-on-collection-errors",
+      "duration_seconds": 14.161,
+      "exit_code": 0,
+      "index": 2,
+      "stderr": "",
+      "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.13.4, pytest-8.4.1, pluggy-1.6.0\nrootdir: /workspace\nconfigfile: .pytest.ini\nplugins: cov-6.2.1\ncollected 99 items\n\nREADME.rst .                                                             [  1%]\nparse.py .                                                               [  2%]\ntests/test_bugs.py ...........                                           [ 13%]\ntests/test_findall.py ...                                                [ 16%]\ntests/test_parse.py .............................................s.....  [ 67%]\ntests/test_parsetype.py .............                                    [ 80%]\ntests/test_pattern.py ...........                                        [ 91%]\ntests/test_result.py ....                                                [ 95%]\ntests/test_search.py ....                                                [100%]\n\n================================ tests coverage ================================\n_______________ coverage: platform linux, python 3.13.4-final-0 ________________\n\nName       Stmts   Miss Branch BrPart  Cover   Missing\n------------------------------------------------------\nparse.py     545     19    240     10    96%   133, 136, 141, 248, 291, 396, 440, 448-452, 465-467, 483, 515->517, 538->540, 632-635, 832->836, 845\n------------------------------------------------------\nTOTAL        545     19    240     10    96%\n======================== 98 passed, 1 skipped in 8.23s =========================\n",
+      "timed_out": false
+    }
+  ],
+  "image": {
+    "architecture": "amd64",
+    "id": "sha256:32204c622ce166f2667fb41a25180a71303ef570126faf9c42ad2de10358f344",
+    "os": "linux",
+    "reference": "nl2repo-audit/parse:candidate",
+    "repo_digests": [
+      "nl2repo-audit/parse@sha256:32204c622ce166f2667fb41a25180a71303ef570126faf9c42ad2de10358f344"
+    ],
+    "size": 55987786
+  },
+  "mode": "legacy",
+  "official_commit": "781a1da1ee41fb8edb0bed22f586d69111610edf",
+  "pytest": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 98,
+    "success_rate": 1,
+    "total": 96
+  },
+  "runner": "shlex.split + direct exec",
+  "task": "parse"
+}

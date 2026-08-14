@@ -1,0 +1,84 @@
+{
+  "after": {
+    "asteval/version.py": {
+      "exists": true,
+      "is_dir": false,
+      "is_file": true,
+      "mode": "0o644",
+      "preview": "version = '0.0.1'\n",
+      "sha256": "a7a52598a245b18a266739b107f2acdcb4c1aeee7516904063f850c3dfe3a206",
+      "size": 18
+    }
+  },
+  "before": {
+    "asteval/version.py": {
+      "exists": false
+    }
+  },
+  "cleanup_exit_code": 0,
+  "commands": [
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "echo \"version = '0.0.1'\" > asteval/version.py"
+      ],
+      "command": "echo \"version = '0.0.1'\" > asteval/version.py",
+      "duration_seconds": 0.621,
+      "exit_code": 0,
+      "index": 1,
+      "stderr": "",
+      "stdout": "",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "pip install -e ."
+      ],
+      "command": "pip install -e .",
+      "duration_seconds": 54.308,
+      "exit_code": 0,
+      "index": 2,
+      "stderr": "WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv\n\n[notice] A new release of pip is available: 23.2.1 -> 26.2.1\n[notice] To update, run: pip install --upgrade pip\n",
+      "stdout": "Obtaining file:///workspace\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Getting requirements to build editable: started\n  Getting requirements to build editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: asteval\n  Building editable for asteval (pyproject.toml): started\n  Building editable for asteval (pyproject.toml): finished with status 'done'\n  Created wheel for asteval: filename=asteval-1.0.0-0.editable-py3-none-any.whl size=3494 sha256=4eb4afa2c60d1bbf2c86ac50f5b213052d347d30330ccf422bdc97dcbcb3b238\n  Stored in directory: /tmp/pip-ephem-wheel-cache-1llw_o5z/wheels/e2/2c/68/4c4a53c0aec7bc75cfaa7bb42a2542d1390caa1e3199ccef70\nSuccessfully built asteval\nInstalling collected packages: asteval\nSuccessfully installed asteval-1.0.0\n",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "-lc",
+        "pytest --continue-on-collection-errors tests"
+      ],
+      "command": "pytest --continue-on-collection-errors tests",
+      "duration_seconds": 17.718,
+      "exit_code": 0,
+      "index": 3,
+      "stderr": "",
+      "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.11.7, pytest-8.4.1, pluggy-1.6.0\nrootdir: /workspace\nconfigfile: pyproject.toml\ncollected 227 items\n\ntests/test_asteval.py .................................................. [ 22%]\n........................................................................ [ 53%]\n...............................                                          [ 67%]\ntests/test_asteval_orig.py ............................................. [ 87%]\n.............................                                            [100%]\n\n============================= 227 passed in 13.67s =============================\n",
+      "timed_out": false
+    }
+  ],
+  "image": {
+    "architecture": "amd64",
+    "id": "sha256:5bb38efe38313d971840ac52382ac43f591ab953a698a71ab3c32cdd9c919bae",
+    "os": "linux",
+    "reference": "nl2repo-audit/asteval:candidate",
+    "repo_digests": [
+      "nl2repo-audit/asteval@sha256:5bb38efe38313d971840ac52382ac43f591ab953a698a71ab3c32cdd9c919bae"
+    ],
+    "size": 439685832
+  },
+  "mode": "fixed",
+  "official_commit": "781a1da1ee41fb8edb0bed22f586d69111610edf",
+  "pytest": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 227,
+    "success_rate": 1.0,
+    "total": 227
+  },
+  "runner": "/bin/sh -lc",
+  "task": "asteval"
+}

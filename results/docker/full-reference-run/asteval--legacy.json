@@ -1,0 +1,80 @@
+{
+  "after": {
+    "asteval/version.py": {
+      "exists": false
+    }
+  },
+  "before": {
+    "asteval/version.py": {
+      "exists": false
+    }
+  },
+  "cleanup_exit_code": 0,
+  "commands": [
+    {
+      "argv": [
+        "echo",
+        "version = '0.0.1'",
+        ">",
+        "asteval/version.py"
+      ],
+      "command": "echo \"version = '0.0.1'\" > asteval/version.py",
+      "duration_seconds": 0.243,
+      "exit_code": 0,
+      "index": 1,
+      "stderr": "",
+      "stdout": "version = '0.0.1' > asteval/version.py\n",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "pip",
+        "install",
+        "-e",
+        "."
+      ],
+      "command": "pip install -e .",
+      "duration_seconds": 51.066,
+      "exit_code": 0,
+      "index": 2,
+      "stderr": "WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv\n\n[notice] A new release of pip is available: 23.2.1 -> 26.2.1\n[notice] To update, run: pip install --upgrade pip\n",
+      "stdout": "Obtaining file:///workspace\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Getting requirements to build editable: started\n  Getting requirements to build editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: asteval\n  Building editable for asteval (pyproject.toml): started\n  Building editable for asteval (pyproject.toml): finished with status 'done'\n  Created wheel for asteval: filename=asteval-1.0.0-0.editable-py3-none-any.whl size=3494 sha256=0644de329ece652155d0728ab1ec7f67eb701ab05f40524cc9c8e21119ea2e63\n  Stored in directory: /tmp/pip-ephem-wheel-cache-6erccwnn/wheels/e2/2c/68/4c4a53c0aec7bc75cfaa7bb42a2542d1390caa1e3199ccef70\nSuccessfully built asteval\nInstalling collected packages: asteval\nSuccessfully installed asteval-1.0.0\n",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "pytest",
+        "--continue-on-collection-errors",
+        "tests"
+      ],
+      "command": "pytest --continue-on-collection-errors tests",
+      "duration_seconds": 6.459,
+      "exit_code": 1,
+      "index": 3,
+      "stderr": "",
+      "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.11.7, pytest-8.4.1, pluggy-1.6.0\nrootdir: /workspace\nconfigfile: pyproject.toml\ncollected 0 items / 2 errors\n\n==================================== ERRORS ====================================\n____________________ ERROR collecting tests/test_asteval.py ____________________\nImportError while importing test module '/workspace/tests/test_asteval.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/local/lib/python3.11/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntests/test_asteval.py:18: in <module>\n    from asteval import *\nasteval/__init__.py:1: in <module>\n    from .version import version as __version__\nE   ModuleNotFoundError: No module named 'asteval.version'\n_________________ ERROR collecting tests/test_asteval_orig.py __________________\nImportError while importing test module '/workspace/tests/test_asteval_orig.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/local/lib/python3.11/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntests/test_asteval_orig.py:18: in <module>\n    from asteval import *\nasteval/__init__.py:1: in <module>\n    from .version import version as __version__\nE   ModuleNotFoundError: No module named 'asteval.version'\n=========================== short test summary info ============================\nERROR tests/test_asteval.py\nERROR tests/test_asteval_orig.py\n============================== 2 errors in 2.73s ===============================\n",
+      "timed_out": false
+    }
+  ],
+  "image": {
+    "architecture": "amd64",
+    "id": "sha256:5bb38efe38313d971840ac52382ac43f591ab953a698a71ab3c32cdd9c919bae",
+    "os": "linux",
+    "reference": "nl2repo-audit/asteval:candidate",
+    "repo_digests": [
+      "nl2repo-audit/asteval@sha256:5bb38efe38313d971840ac52382ac43f591ab953a698a71ab3c32cdd9c919bae"
+    ],
+    "size": 439685832
+  },
+  "mode": "legacy",
+  "official_commit": "781a1da1ee41fb8edb0bed22f586d69111610edf",
+  "pytest": {
+    "errors": 4,
+    "failed": 0,
+    "passed": 0,
+    "success_rate": 0.0,
+    "total": 227
+  },
+  "runner": "shlex.split + direct exec",
+  "task": "asteval"
+}
